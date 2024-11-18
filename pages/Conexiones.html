@@ -6,61 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
     <style>
-        /* Estilos adicionales para imágenes y diseño */
+        /* Estilos para el contenedor de imágenes al lado del texto */
         .image-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .image-container img {
-            width: 80%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .content {
-            font-size: 1.1em;
-            line-height: 1.6;
-            padding: 20px;
-            background-color: #f4f4f4; /* Fondo suave */
-            border-radius: 10px; /* Bordes redondeados */
-            border: 2px solid #ddd; /* Borde gris suave */
-            margin: 20px 0; /* Separación con otros elementos */
-        }
-        .content ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .content ul li {
-            margin: 10px 0;
-            font-size: 1.1em;
-        }
-        .sectiontitle h6 {
-            color: #333;
-        }
-    </style>
+         margin: 20px 0;
+         display: flex;
+         align-items: center;
+     }
+
+     .image-container img {
+         width: 30%;  /* Cambia el tamaño de la imagen según el diseño */
+         height: auto;
+         border-radius: 10px;
+         margin: 0 20px; /* Espacio entre la imagen y el texto */
+     }
+
+     .image-left {
+         float: left;
+         width: 45%;
+         margin-right: 20px;
+         margin-bottom: 20px;
+         border-radius: 10px;
+     }
+
+     .image-right {
+         float: right;
+         width: 45%;
+         margin-left: 20px;
+         margin-bottom: 20px;
+         border-radius: 10px;
+     }
+
+     .content {
+         font-size: 1.1em;
+         line-height: 1.6;
+         padding: 20px;
+         background-color: #f4f4f4; /* Fondo suave */
+         border-radius: 10px; /* Bordes redondeados */
+         border: 2px solid #ddd; /* Borde gris suave */
+         margin: 20px 0; /* Separación con otros elementos */
+     }
+     .content ul {
+         list-style: none;
+         padding-left: 0;
+     }
+     .content ul li {
+         margin: 10px 0;
+         font-size: 1.1em;
+     }
+     .sectiontitle h6 {
+         color: #333;
+     }
+
+     /* Limpiar el flujo después de las imágenes flotantes */
+     .clear-both {
+         clear: both;
+     }
+ </style>
 </head>
 <body id="top">
 <!-- Encabezado y navegación -->
 <div class="wrapper row1">
     <header id="header" class="hoc clear"> 
-        <div id="logo" class="fl_left">
-            <h1><a href="index.html">Conexiones Humanas</a></h1>
-        </div>
-        <nav id="mainav" class="fl_right">
-            <ul class="clear">
-                <li><a href="index.html">Inicio</a></li>
-                <li class="active"><a href="detalle.html">Detalles</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 </div>
 <!-- Título y sección de introducción -->
-<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
+<div class="wrapper bgded overlay" >
     <div id="breadcrumb" class="hoc clear">
         <h6 class="heading">Detalles sobre Conexiones Humanas</h6>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="detalle.html">Detalles</a></li>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/pages/La Mirada.html">La Mirada en la Comunicación</a></li>
+            <li><a href="/pages/Niveles de vida.html">Niveles de Vida y Psicología</a></li>
         </ul>
     </div>
 </div>
@@ -75,14 +91,14 @@
             <p>Las conexiones humanas no dependen solo de las palabras. De hecho, más del 70% de nuestra comunicación diaria se realiza a través de señales no verbales, como las expresiones faciales, la postura y el contacto visual. Estas señales son esenciales para construir relaciones auténticas y profundas, ya que permiten expresar emociones, intenciones y empatía sin necesidad de palabras.</p>
 
             <div class="image-container">
-                <img src="images/demo/communication.jpg" alt="Comunicación no verbal">
+                <img src="/images/demo/gallery/No verbal.webp" alt="Comunicación no verbal">
                 <p><i>Las señales no verbales, como el contacto visual y las expresiones faciales, son esenciales en la comunicación.</i></p>
             </div>
 
             <p>Los estudios han demostrado que la comprensión de estas señales mejora no solo nuestras relaciones personales, sino también nuestra salud emocional y mental. Las interacciones con los demás, cuando se basan en una comunicación no verbal efectiva, pueden crear un ambiente de confianza y comprensión mutua, lo que resulta en relaciones más satisfactorias y saludables.</p>
 
             <div class="image-container">
-                <img src="images/demo/trust.jpg" alt="Confianza en relaciones">
+                <img src="/images/demo/gallery/relacion.png" alt="Confianza en relaciones">
                 <p><i>La comunicación no verbal puede fortalecer la confianza en las relaciones interpersonales.</i></p>
             </div>
 
@@ -97,12 +113,12 @@
             </ul>
 
             <div class="image-container">
-                <img src="images/demo/relationships.jpg" alt="Relaciones interpersonales">
+                <img src="/images/demo/gallery/Interpersonales.jpg" alt="Relaciones interpersonales">
                 <p><i>Una buena comunicación no verbal mejora nuestras relaciones personales y profesionales.</i></p>
             </div>
 
             <p>Al integrar estas señales en nuestras interacciones cotidianas, podemos crear un ambiente más armonioso y auténtico, donde las palabras no siempre sean necesarias para comprender las emociones y las intenciones de los demás.</p>
-            <a class="btn" href="index.html">Regresar a la página principal</a>
+            <a class="btn" href="/index.html">Regresar a la página principal</a>
         </div>
     </main>
 </div>
