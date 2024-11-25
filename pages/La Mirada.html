@@ -11,18 +11,28 @@
             font-size: 1.1em;
             line-height: 1.6;
             padding: 20px;
-            background-color: #e0e0e0; /* Color gris claro */            border-radius: 10px; /* Bordes redondeados */
+            background-color: #e0e0e0; /* Color gris claro */
+            border-radius: 10px; /* Bordes redondeados */
             border: 2px solid #ddd; /* Borde gris suave */
             margin: 20px 0; /* Separación con otros elementos */
+            opacity: 0;
+            transition: opacity 2s ease-out;
         }
+
+        .content.visible {
+            opacity: 1;
+        }
+
         .content ul {
             list-style: none;
             padding-left: 0;
         }
+
         .content ul li {
             margin: 10px 0;
             font-size: 1.1em;
         }
+
         .sectiontitle h6 {
             color: #333;
         }
@@ -39,6 +49,11 @@
             height: auto;
             border-radius: 10px;
             margin: 0 20px; /* Espacio entre la imagen y el texto */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
         }
 
         /* Imagen a la izquierda */
@@ -50,11 +65,24 @@
         .image-right {
             order: 2; /* Ordena la imagen a la derecha */
         }
+
+        /* Transiciones en los enlaces */
+        .btn {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f04e23;
+            transform: scale(1.1);
+        }
     </style>
+
+    <!-- Incluir AOS para animaciones al hacer scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body id="top">
 <!-- Título y sección de introducción -->
-<div class="wrapper bgded overlay" >
+<div class="wrapper bgded overlay">
     <div id="breadcrumb" class="hoc clear">
         <h6 class="heading">Detalles sobre Conexiones Humanas</h6>
         <ul>
@@ -68,21 +96,21 @@
 <!-- Contenido de la página -->
 <div class="wrapper row3">
     <main class="hoc container clear">
-        <div class="sectiontitle center">
+        <div class="sectiontitle center" data-aos="fade-up">
             <h6 class="heading">La Mirada en la Comunicación: Un Vínculo Profundo</h6>
             <p>Explora cómo la mirada no solo refleja nuestras emociones, sino también cómo puede fortalecer nuestras relaciones personales y profesionales.</p>
         </div>
-        <div class="content">
+        <div class="content visible" data-aos="fade-up">
             <p>La mirada, como forma de comunicación no verbal, es fundamental para establecer conexiones auténticas con los demás. A lo largo de la historia, la capacidad de mirarse mutuamente ha sido vista como un indicio de sinceridad, respeto y empatía. De hecho, la ciencia demuestra que el contacto visual puede influir significativamente en nuestras emociones, creando una comunicación más profunda que las palabras.</p>
 
-            <div class="image-container image-left">
+            <div class="image-container image-left" data-aos="fade-left">
                 <img src="/images/demo/gallery/contactovisual.jpg" alt="Contacto visual">
                 <p><i>El contacto visual es una forma poderosa de conectar emocionalmente con los demás.</i></p>
             </div>
 
             <p>Cuando establecemos contacto visual, no solo intercambiamos información, sino que también revelamos aspectos profundos de nuestra psique, tales como nuestra confianza, nerviosismo, o sinceridad. Además, el contacto visual juega un papel crucial en la regulación de nuestras interacciones. A través de él, podemos percibir las emociones del otro y adaptar nuestra comunicación de manera más efectiva.</p>
 
-            <div class="image-container image-right">
+            <div class="image-container image-right" data-aos="fade-right">
                 <img src="/images/demo/gallery/Empatía.png" alt="Empatía en la comunicación">
                 <p><i>Una mirada puede transmitir empatía y comprensión, facilitando una comunicación más auténtica.</i></p>
             </div>
@@ -91,14 +119,14 @@
             <p>Desde un punto de vista psicológico, la mirada refleja nuestro estado emocional, y entender cómo se expresa a través de los ojos puede ayudarnos a comprender mejor nuestros propios sentimientos y los de los demás. Los estudios han demostrado que una mirada fija y sincera puede fortalecer la relación interpersonal, mientras que evitar el contacto visual puede crear una barrera en la comunicación.</p>
 
             <h6>Beneficios de una Buena Comunicación Visual</h6>
-            <ul>
+            <ul data-aos="fade-up">
                 <li><strong>Fomenta la confianza:</strong> El contacto visual directo puede hacer que las personas se sientan más cómodas y dispuestas a abrirse.</li>
                 <li><strong>Mejora la empatía:</strong> Nos ayuda a leer las emociones de los demás, lo que facilita la conexión emocional.</li>
                 <li><strong>Refuerza la conexión emocional:</strong> Una mirada sincera puede ser más significativa que muchas palabras.</li>
                 <li><strong>Aumenta la comprensión:</strong> A través de la mirada, podemos captar detalles que las palabras no comunican.</li>
             </ul>
 
-            <div class="image-container image-left">
+            <div class="image-container image-left" data-aos="fade-left">
                 <img src="/images/demo/gallery/Confianza.jpg" alt="Confianza en relaciones">
                 <p><i>El establecimiento de una conexión genuina depende en gran medida de la confianza, que se ve reflejada en la mirada.</i></p>
             </div>
@@ -108,6 +136,7 @@
         </div>
     </main>
 </div>
+
 <!-- Footer -->
 <div class="wrapper row5">
     <footer id="footer" class="hoc clear">
@@ -116,9 +145,23 @@
         </div>
     </footer>
 </div>
+
 <!-- Scripts -->
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.flexslider-min.js"></script>
 <script src="layout/scripts/scripts.js"></script>
+<!-- Incluir la librería AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    // Inicializar AOS para las animaciones
+    AOS.init({
+        duration: 1200, // Duración de las animaciones
+    });
+
+    // Mostrar el contenido con transición de opacidad
+    window.onload = function() {
+        document.querySelector('.content').classList.add('visible');
+    }
+</script>
 </body>
 </html>

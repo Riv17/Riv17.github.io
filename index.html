@@ -1,152 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>La Mirada y la Comunicación</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>La Mirada y la Comunicación</title>
+
     <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Animaciones CSS -->
+    <style>
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes rotateIn {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .rotate-in {
+            animation: rotateIn 3s ease-in-out;
+        }
+
+        .btn {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #f04e23;
+            transform: scale(1.1);
+        }
+
+        /* Desplazamiento suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Efectos en las imágenes */
+        .img-hover {
+            transition: transform 0.3s ease;
+        }
+
+        .img-hover:hover {
+            transform: scale(1.1);
+        }
+
+        /* Efectos de botones y enlaces */
+        .nav-link:hover {
+            background-color: #f04e23;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- Incluir AOS para animaciones al hacer scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body id="top">
-<div class="wrapper row1">
-    <header id="header" class="hoc clear"> 
-        <div id="logo" class="fl_left">
-            <h1><a href="index.html">La Mirada y la Comunicación</a></h1>
-        </div>
-        <nav id="mainav" class="fl_right">
-            <ul class="clear">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a class="drop" href="#">Pages</a>
-                    <ul>
-                        <li><a href="/pages/La Mirada.html">La Mirada en la Comunicación</a></li>
-                        <li><a href="/pages/Niveles de vida.html">Niveles de Vida y Psicología</a></li>
-                        <li><a href="/pages/Conexiones.html">Conexiones humanas</a></li>
-                        <li><a href="/pages/La mirad en la relacion.html">Comunicación Visual en las Relaciones</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-</div>
-<div class="bgded overlay" style="background-image:url('images/demo/gallery/Mirada3.jpg');">
-    <div id="pageintro" class="hoc clear"> 
-        <div class="flexslider basicslider">
-            <ul class="slides">
-                <li>
-                    <article>
-                        <h3 class="heading">La Mirada en la Comunicación</h3>
-                        <p>La mirada es una poderosa herramienta de comunicación que refleja nuestras emociones y pensamientos. A través de ella, podemos transmitir empatía, confianza y comprensión.</p>
-                        <p class="font-x1 uppercase bold">Entender la mirada es entendernos a nosotros mismos.</p>
-                        <footer>
-                            <ul class="nospace inline pushright">
-                                <li><a class="btn" href="/pages/La Mirada.html">Leer Más</a></li>
-                            </ul>
-                        </footer>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3 class="heading">Niveles de Vida y Psicología</h3>
-                        <p>Exploramos cómo la comunicación no verbal, especialmente la mirada, influye en nuestras interacciones y en la comprensión de nuestras emociones internas.</p>
-                        <p class="font-x1 uppercase bold">La mirada como espejo del alma.</p>
-                        <footer>
-                            <ul class="nospace inline pushright">
-                                <li><a class="btn" href="/pages/Niveles de vida.html">Descubre Más</a></li>
-                            </ul>
-                        </footer>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3 class="heading">Conexiones Humanas</h3>
-                        <p>Las interacciones diarias están llenas de señales no verbales. Comprenderlas puede mejorar nuestras relaciones y la calidad de vida.</p>
-                        <p class="font-x1 uppercase bold">La comunicación va más allá de las palabras.</p>
-                        <footer>
-                            <ul class="nospace inline pushright">
-                                <li><a class="btn" href="/pages/Conexiones.html">Explora</a></li>
-                            </ul>
-                        </footer>
-                    </article>
-                </li>
-            </ul>
-        </div>
+    <div class="wrapper row1">
+        <header id="header" class="hoc clear"> 
+            <div id="logo" class="fl_left">
+                <h1 class="fade-in"><a href="index.html">La Mirada y la Comunicación</a></h1>
+            </div>
+            <nav id="mainav" class="fl_right">
+                <ul class="clear">
+                    <li class="active"><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="drop" href="#">Pages</a>
+                        <ul>
+                            <li><a href="/pages/La Mirada.html">La Mirada en la Comunicación</a></li>
+                            <li><a href="/pages/Niveles de vida.html">Niveles de Vida y Psicología</a></li>
+                            <li><a href="/pages/Conexiones.html">Conexiones humanas</a></li>
+                            <li><a href="/pages/La mirad en la relacion.html">Comunicación Visual en las Relaciones</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
     </div>
-</div>
-<!-- ################################################################################################ -->
-<div class="wrapper coloured">
-    <article class="hoc cta clear"> 
-        <h6 class="three_quarter first">Aprende sobre la importancia de la comunicación visual y sus efectos en nuestras relaciones.</h6>
-        <footer class="one_quarter"><a class="btn" href="/pages/La mirad en la relacion.html">Más Información &raquo;</a></footer>
-    </article>
-</div>
-<!-- ################################################################################################ -->
-<div class="wrapper bgded" style="background-image:url('images/demo/gallery/Vida1.jpg');">
-    <div class="hoc split clear">
-        <section> 
-            <p class="nospace font-xs">Importancia de la mirada en la comunicación</p>
-            <h6 class="heading">Niveles de vida y su impacto psicológico</h6>
-            <p class="btmspace-30">La mirada no solo afecta nuestras interacciones sociales, sino que también tiene un profundo impacto en nuestra salud mental y bienestar.</p>
-            <ul class="fa-ul">
-                <li><i class="fa-li fa fa-check-circle"></i> La mirada fomenta la conexión emocional.</li>
-                <li><i class="fa-li fa fa-check-circle"></i> Mejora la comprensión en las relaciones interpersonales.</li>
-                <li><i class="fa-li fa fa-check-circle"></i> Refleja nuestro estado interno y emociones.</li>
-            </ul>
-        </section>
-    </div>
-</div>
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-    <main class="hoc container clear"> 
-        <div class="sectiontitle center">
-            <h6 class="heading">Entendiendo la Mirada</h6>
-            <p>La mirada y la comunicación: herramientas esenciales para la comprensión humana.</p>
-        </div>
-        <div class="clear">
-            <div class="two_third first">
-                <p>La mirada es fundamental en la comunicación. Nos permite conectar con los demás a un nivel más profundo y genuino. A través de la mirada, expresamos nuestras intenciones y sentimientos, lo que puede influir en nuestras interacciones diarias.</p>
-                <p class="btmspace-50">Al entender cómo usar la mirada de manera efectiva, podemos mejorar nuestras relaciones personales y profesionales, creando un ambiente más saludable y comprensivo.</p>
-                <ul class="nospace group">
-                    <li class="one_third first">
-                        <article><i class="icon btmspace-30 fa fa-eye"></i></a>
-                            <h6 class="heading font-x1">Importancia de la Mirada</h6>
-                            <p>La mirada es la puerta a la comprensión emocional y social.</p>
+
+    <div class="bgded overlay" style="background-image:url('images/demo/gallery/Mirada3.jpg');">
+        <div id="pageintro" class="hoc clear fade-in"> 
+            <div class="flexslider basicslider">
+                <ul class="slides">
+                    <li>
+                        <article>
+                            <h3 class="heading">La Mirada en la Comunicación</h3>
+                            <p>La mirada es una poderosa herramienta de comunicación que refleja nuestras emociones y pensamientos. A través de ella, podemos transmitir empatía, confianza y comprensión.</p>
+                            <p class="font-x1 uppercase bold">Entender la mirada es entendernos a nosotros mismos.</p>
+                            <footer>
+                                <ul class="nospace inline pushright">
+                                    <li><a class="btn" href="/pages/La Mirada.html">Leer Más</a></li>
+                                </ul>
+                            </footer>
                         </article>
                     </li>
-                    <li class="one_third">
-                        <article><i class="icon btmspace-30 fa fa-comments"></i></a>
-                            <h6 class="heading font-x1">Comunicación Efectiva</h6>
-                            <p>Aprende a usar la mirada para mejorar tus interacciones.</p>
+                    <li>
+                        <article>
+                            <h3 class="heading">Niveles de Vida y Psicología</h3>
+                            <p>Exploramos cómo la comunicación no verbal, especialmente la mirada, influye en nuestras interacciones y en la comprensión de nuestras emociones internas.</p>
+                            <p class="font-x1 uppercase bold">La mirada como espejo del alma.</p>
+                            <footer>
+                                <ul class="nospace inline pushright">
+                                    <li><a class="btn" href="/pages/Niveles de vida.html">Descubre Más</a></li>
+                                </ul>
+                            </footer>
                         </article>
                     </li>
-                    <li class="one_third">
-                        <article><i class="icon btmspace-30 fa fa-comments"></i></a>
-                            <h6 class="heading font-x1">Psicología de la Mirada</h6>
-                            <p>Descubre cómo la mirada afecta tu bienestar emocional.</p>
+                    <li>
+                        <article>
+                            <h3 class="heading">Conexiones Humanas</h3>
+                            <p>Las interacciones diarias están llenas de señales no verbales. Comprenderlas puede mejorar nuestras relaciones y la calidad de vida.</p>
+                            <p class="font-x1 uppercase bold">La comunicación va más allá de las palabras.</p>
+                            <footer>
+                                <ul class="nospace inline pushright">
+                                    <li><a class="btn" href="/pages/Conexiones.html">Explora</a></li>
+                                </ul>
+                            </footer>
                         </article>
                     </li>
                 </ul>
             </div>
-            <!-- penultimas imagenes -->
-            <div class="one_third"><img class="inspace-10 btmspace-15 borderedbox" src="images/demo/gallery/mirada 2.jpeg" alt=""></a><br>
-                <img class="inspace-10 borderedbox" src="images/demo/gallery/mirada.jpg" alt=""></a></div>
         </div>
-        <div class="clear"></div>
-    </main>
-</div>
-<!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/03.png');">
-    <div id="testimonial" class="hoc container clear"> 
-        <blockquote>“La mirada es la ventana del alma; a través de ella, podemos ver la profundidad de las emociones humanas.”</blockquote>
-        <!-- <figure><img class="circle" src="images/demo/60x60.png" alt=""> -->
-            <figcaption><strong></strong><br>
-        </figure>
     </div>
-</div>
-<!-- ################################################################################################ -->
-<footer>
-</footer>
-<script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/jquery.flexslider-min.js"></script>
-<script src="layout/scripts/scripts.js"></script>
+
+    <div class="wrapper coloured">
+        <article class="hoc cta clear"> 
+            <h6 class="three_quarter first fade-in">Aprende sobre la importancia de la comunicación visual y sus efectos en nuestras relaciones.</h6>
+            <footer class="one_quarter"><a class="btn" href="/pages/La mirad en la relacion.html">Más Información &raquo;</a></footer>
+        </article>
+    </div>
+
+    <div class="wrapper bgded" style="background-image:url('images/demo/gallery/Vida1.jpg');">
+        <div class="hoc split clear">
+            <section class="slide-in"> 
+                <p class="nospace font-xs">Importancia de la mirada en la comunicación</p>
+                <h6 class="heading">Niveles de vida y su impacto psicológico</h6>
+                <p class="btmspace-30">La mirada no solo afecta nuestras interacciones sociales, sino que también tiene un profundo impacto en nuestra salud mental y bienestar.</p>
+                <ul class="fa-ul">
+                    <li><i class="fa-li fa fa-check-circle"></i> La mirada fomenta la conexión emocional.</li>
+                    <li><i class="fa-li fa fa-check-circle"></i> Mejora la comprensión en las relaciones interpersonales.</li>
+                    <li><i class="fa-li fa fa-check-circle"></i> Refleja nuestro estado interno y emociones.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <div class="wrapper row3">
+        <main class="hoc container clear"> 
+            <div class="sectiontitle center fade-in">
+                <h6 class="heading">Entendiendo la Mirada</h6>
+                <p>La mirada y la comunicación: herramientas esenciales para la comprensión humana.</p>
+            </div>
+            <div class="clear">
+                <div class="two_third first">
+                    <p>La mirada es fundamental en la comunicación. Nos permite conectar con los demás a un nivel más profundo y genuino. A través de la mirada, expresamos nuestras intenciones y sentimientos, lo que puede influir en nuestras interacciones diarias.</p>
+                    <p class="btmspace-50">Al entender cómo usar la mirada de manera efectiva, podemos mejorar nuestras relaciones personales y profesionales, creando un ambiente más saludable y comprensivo.</p>
+                    <ul class="nospace group">
+                        <li class="one_third first">
+                            <article><i class="icon btmspace-30 fa fa-eye"></i>
+                                <h6 class="heading font-x1">Importancia de la Mirada</h6>
+                                <p>La mirada es la puerta a la comprensión emocional y social.</p>
+                            </article>
+                        </li>
+                        <li class="one_third">
+                            <article><i class="icon btmspace-30 fa fa-comments"></i>
+                                <h6 class="heading font-x1">Comunicación Efectiva</h6>
+                                <p>Aprende a usar la mirada para mejorar tus interacciones.</p>
+                            </article>
+                        </li>
+                        <li class="one_third">
+                            <article><i class="icon btmspace-30 fa fa-comments"></i>
+                                <h6 class="heading font-x1">Psicología de la Mirada</h6>
+                                <p>Descubre cómo la mirada afecta tu bienestar emocional.</p>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                <div class="one_third">
+                    <img class="img-hover" src="images/demo/gallery/mirada 2.jpeg" alt="">
+                    <br>
+                    <img class="img-hover" src="images/demo/gallery/mirada.jpg" alt="">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/03.png');">
+        <div id="testimonial" class="hoc container clear"> 
+            <blockquote>“La mirada es la ventana del alma; a través de ella, podemos ver la profundidad de las emociones humanas.”</blockquote>
+        </div>
+    </div>
+
+    <footer>
+    </footer>
+
+    <script src="layout/scripts/jquery.min.js"></script>
+    <script src="layout/scripts/jquery.flexslider-min.js"></script>
+    <script src="layout/scripts/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Duración de las animaciones
+        });
+    </script>
 </body>
 </html>

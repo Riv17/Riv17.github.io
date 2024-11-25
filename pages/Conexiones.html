@@ -8,60 +8,98 @@
     <style>
         /* Estilos para el contenedor de imágenes al lado del texto */
         .image-container {
-         margin: 20px 0;
-         display: flex;
-         align-items: center;
-     }
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            opacity: 0; /* Comienza invisible */
+            animation: fadeIn 1s forwards 0.5s; /* Animación de aparición con retardo */
+        }
 
-     .image-container img {
-         width: 30%;  /* Cambia el tamaño de la imagen según el diseño */
-         height: auto;
-         border-radius: 10px;
-         margin: 0 20px; /* Espacio entre la imagen y el texto */
-     }
+        .image-container img {
+            width: 30%;  /* Cambia el tamaño de la imagen según el diseño */
+            height: auto;
+            border-radius: 10px;
+            margin: 0 20px; /* Espacio entre la imagen y el texto */
+        }
 
-     .image-left {
-         float: left;
-         width: 45%;
-         margin-right: 20px;
-         margin-bottom: 20px;
-         border-radius: 10px;
-     }
+        .image-left, .image-right {
+            float: left;
+            width: 45%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            opacity: 0; /* Comienza invisible */
+            animation: slideIn 1s forwards; /* Animación deslizante */
+        }
 
-     .image-right {
-         float: right;
-         width: 45%;
-         margin-left: 20px;
-         margin-bottom: 20px;
-         border-radius: 10px;
-     }
+        .image-right {
+            float: right;
+            margin-left: 20px;
+        }
 
-     .content {
-         font-size: 1.1em;
-         line-height: 1.6;
-         padding: 20px;
-         background-color: #f4f4f4; /* Fondo suave */
-         border-radius: 10px; /* Bordes redondeados */
-         border: 2px solid #ddd; /* Borde gris suave */
-         margin: 20px 0; /* Separación con otros elementos */
-     }
-     .content ul {
-         list-style: none;
-         padding-left: 0;
-     }
-     .content ul li {
-         margin: 10px 0;
-         font-size: 1.1em;
-     }
-     .sectiontitle h6 {
-         color: #333;
-     }
+        .content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4; /* Fondo suave */
+            border-radius: 10px; /* Bordes redondeados */
+            border: 2px solid #ddd; /* Borde gris suave */
+            margin: 20px 0; /* Separación con otros elementos */
+            opacity: 0;
+            animation: fadeInContent 1.5s forwards 1s; /* Animación de contenido con retardo */
+        }
 
-     /* Limpiar el flujo después de las imágenes flotantes */
-     .clear-both {
-         clear: both;
-     }
- </style>
+        .content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content ul li {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .sectiontitle h6 {
+            color: #333;
+            opacity: 0; /* Comienza invisible */
+            animation: fadeInText 2s forwards 0.2s; /* Animación de título con retardo */
+        }
+
+        /* Limpiar el flujo después de las imágenes flotantes */
+        .clear-both {
+            clear: both;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInContent {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
 </head>
 <body id="top">
 <!-- Encabezado y navegación -->
@@ -70,7 +108,7 @@
     </header>
 </div>
 <!-- Título y sección de introducción -->
-<div class="wrapper bgded overlay" >
+<div class="wrapper bgded overlay">
     <div id="breadcrumb" class="hoc clear">
         <h6 class="heading">Detalles sobre Conexiones Humanas</h6>
         <ul>

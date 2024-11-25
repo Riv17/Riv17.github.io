@@ -44,7 +44,14 @@
             border-radius: 10px; /* Bordes redondeados */
             border: 2px solid #ddd; /* Borde gris suave */
             margin: 20px 0; /* Separación con otros elementos */
+            opacity: 0;
+            transition: opacity 2s ease-out;
         }
+
+        .content.visible {
+            opacity: 1;
+        }
+
         .content ul {
             list-style: none;
             padding-left: 0;
@@ -61,13 +68,35 @@
         .clear-both {
             clear: both;
         }
+
+        /* Transiciones en las imágenes */
+        .img-transition {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img-transition:hover {
+            transform: scale(1.1);
+        }
+
+        /* Transiciones suaves en los enlaces */
+        .btn {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f04e23;
+            transform: scale(1.1);
+        }
     </style>
+
+    <!-- Incluir AOS para animaciones al hacer scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body id="top">
 <!-- Título y sección de introducción -->
-<div class="wrapper bgded overlay" >
+<div class="wrapper bgded overlay">
     <div id="breadcrumb" class="hoc clear">
-        <h6 class="heading">Detalles sobre Conexiones Humanas</h6>
+        <h6 class="heading" data-aos="fade-up">Detalles sobre Conexiones Humanas</h6>
         <ul>
             <li><a href="/index.html">Inicio</a></li>
             <li><a href="/pages/La Mirada.html">La Mirada en la Comunicación</a></li>
@@ -78,31 +107,31 @@
 <!-- Contenido de la página -->
 <div class="wrapper row3">
     <main class="hoc container clear">
-        <div class="sectiontitle center">
+        <div class="sectiontitle center" data-aos="fade-up">
             <h6 class="heading">La mirada como espejo del alma</h6>
             <p>Exploramos cómo la comunicación no verbal, especialmente la mirada, influye en nuestras interacciones sociales, nuestra percepción emocional y cómo es fundamental en el entendimiento de los estados internos de los demás.</p>
         </div>
-        <div class="content">
+        <div class="content visible" data-aos="fade-up">
             <p>La mirada ha sido objeto de estudio durante siglos debido a su capacidad para transmitir información emocional y psicológica. En las interacciones sociales, la forma en que miramos a los demás y cómo somos observados puede tener un impacto significativo en la interpretación de las emociones. La psicología ha demostrado que el contacto visual puede transmitir confianza, agrado, agresividad, o incluso desinterés, sin que se pronuncie una sola palabra.</p>
             
             <!-- Imagen flotante a la derecha -->
-            <div class="image-container">
-                <img src="/images/demo/gallery/contactovisual2.jpg" alt="Contacto visual" class="image-right">
+            <div class="image-container" data-aos="fade-left">
+                <img src="/images/demo/gallery/contactovisual2.jpg" alt="Contacto visual" class="image-right img-transition">
                 <p><i>El contacto visual es una herramienta clave en la comprensión emocional.</i></p>
             </div>
 
             <p>El contacto visual directo fomenta una conexión emocional más profunda entre las personas. A través de la mirada, las personas pueden sentir empatía, entender las emociones del otro y crear vínculos de confianza. Sin embargo, evitar la mirada o tener una mirada evasiva puede interpretarse como falta de interés o desconfianza.</p>
             
             <!-- Imagen flotante a la izquierda -->
-            <div class="image-container">
-                <img src="/images/demo/gallery/Corporal.avif" alt="Lenguaje corporal en psicología" class="image-left">
+            <div class="image-container" data-aos="fade-right">
+                <img src="/images/demo/gallery/Corporal.avif" alt="Lenguaje corporal en psicología" class="image-left img-transition">
                 <p><i>El lenguaje corporal, combinado con la mirada, tiene un gran impacto en nuestra psicología.</i></p>
             </div>
 
             <p>En términos psicológicos, la mirada es considerada una forma clave de comunicación no verbal. Es utilizada en terapias psicológicas para captar señales de incomodidad o conflicto emocional, ayudando a los profesionales a interpretar las necesidades y preocupaciones de sus pacientes.</p>
 
             <h6>Impacto emocional de la mirada:</h6>
-            <ul>
+            <ul data-aos="fade-up">
                 <li>Refleja emociones internas como la felicidad, la tristeza, la sorpresa o el enojo.</li>
                 <li>Fomenta la empatía y la comprensión en las relaciones interpersonales.</li>
                 <li>Ayuda a establecer confianza y fortalecer vínculos emocionales.</li>
@@ -110,8 +139,8 @@
             </ul>
 
             <!-- Imagen flotante a la derecha -->
-            <div class="image-container">
-                <img src="/images/demo/gallery/conexion.jpg" alt="Conexión emocional" class="image-right">
+            <div class="image-container" data-aos="fade-left">
+                <img src="/images/demo/gallery/conexion.jpg" alt="Conexión emocional" class="image-right img-transition">
                 <p><i>Las señales no verbales, como la mirada, refuerzan la conexión emocional.</i></p>
             </div>
 
@@ -132,5 +161,18 @@
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.flexslider-min.js"></script>
 <script src="layout/scripts/scripts.js"></script>
+<!-- Incluir la librería AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    // Inicializar AOS para las animaciones
+    AOS.init({
+        duration: 1200, // Duración de las animaciones
+    });
+
+    // Mostrar el contenido con transición de opacidad
+    window.onload = function() {
+        document.querySelector('.content').classList.add('visible');
+    }
+</script>
 </body>
 </html>
