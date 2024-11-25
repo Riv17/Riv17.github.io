@@ -290,7 +290,7 @@ td{border-width:0 1px;}
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{color:#efebeb; background-color:#141414;}
-a{color:#0b0808;}
+a{color:#0f0e0e;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#b00f0f; background-color:inherit;}
