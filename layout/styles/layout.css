@@ -272,9 +272,9 @@ td{border-width:0 1px;}
 .faico a{color:inherit; background-color:#141414;}
 .faico a:hover{color:#FFFFFF;}
 
-.faicon-dribble:hover{background-color:#EA4C89;}
+.faicon-dribble:hover{background-color:#610025;}
 .faicon-facebook:hover{background-color:#3B5998;}
-.faicon-google-plus:hover{background-color:#DB4A39;}
+.faicon-google-plus:hover{background-color:#98514a;}
 .faicon-linkedin:hover{background-color:#0E76A8;}
 .faicon-twitter:hover{background-color:#00ACEE;}
 .faicon-vk:hover{background-color:#4E658E;}
@@ -289,34 +289,34 @@ td{border-width:0 1px;}
 
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
-body{color:#bb0606; background-color:#141414;}
-a{color:#D64E3F;}
+body{color:#efebeb; background-color:#141414;}
+a{color:#0b0808;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
-label span{color:#FF0000; background-color:inherit;}
-input:focus, textarea:focus, *:required:focus{border-color:#D64E3F;}
+label span{color:#b00f0f; background-color:inherit;}
+input:focus, textarea:focus, *:required:focus{border-color:#931c0f;}
 .overlay{color:#FFFFFF; background-color:inherit;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
 
-.btn, .btn.inverse:hover, a .icon.fa, a.inverse:hover .icon.fa{color:#FFFFFF; background-color:#D64E3F; border-color:#D64E3F;}
+.btn, .btn.inverse:hover, a .icon.fa, a.inverse:hover .icon.fa{color:#FFFFFF; background-color:#050A30; border-color:#F4F6FC;}
 .btn:hover, .btn.inverse, a:hover .icon.fa, a.inverse .icon.fa{color:inherit; background-color:transparent; border-color:inherit;}
 
 
 /* Rows */
 .row0, .row0 a{color:#474747; background-color:#FFFFFF;}
-.row1{color:#FFFFFF; background-color:#141414;}
+.row1{color:#FFFFFF; background-color:#141414;}/*Header*/
 .row2{color:#474747; background-color:#F7F7F7;}
 .row3{color:#474747; background-color:#b8b8b8;} /*fondo de pagina*/
 .row4{color:#CBCBCB; background-color:#252525;}
 .row5, .row5 a{color:#CBCBCB; background-color:#141414;}
 
 .coloured{color:#FFFFFF; background:linear-gradient(to top,#A22F22,#D64E3F);}
-.coloured .btn{color:#D64E3F; background-color:#FFFFFF;}
+.coloured .btn{color:#c71400; background-color:#FFFFFF;}
 .coloured .btn:hover{color:inherit; background-color:transparent; border-color:inherit;}
 
 
 /* Top Bar */
-#topbar, #topbar ul li{border-color:rgba(0,0,0,.1);}
+#topbar, #topbar ul li{border-color:rgba(228, 39, 39, 0.1);}
 #topbar > div:last-of-type li:first-child a{color:#D64E3F;}
 
 
@@ -326,7 +326,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#D64E3F;}
 
 /* Split Box */
 .split section, .split section::after{color:#FFFFFF; background-color:rgba(0,0,0,.55);}
-.split section .fa-ul .fa-li{color:#D64E3F;}
+.split section .fa-ul .fa-li{color:#F4F6FC	;}
 
 
 /* Content Area */
@@ -336,8 +336,8 @@ input:focus, textarea:focus, *:required:focus{border-color:#D64E3F;}
 
 
 /* Testimonial */
-#testimonial blockquote{color:#FFFFFF; background-color:rgba(214,78,63,.3);/* #D64E3F */}
-#testimonial blockquote::before{color:#FFFFFF; background-color:#D64E3F; border-color:#D64E3F;}
+#testimonial blockquote{color:#FFFFFF; background-color: #B79347	;/* #D64E3F */}
+#testimonial blockquote::before{color:#FFFFFF; background-color:#050A30; border-color:#050A30;}
 
 
 /* Footer */
@@ -356,7 +356,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#D64E3F;}
 
 /* Navigation */
 #mainav li a{color:inherit;}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#D64E3F; background-color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#B79347	; background-color:inherit;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
 #mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#D64E3F;}
 #mainav form select{color:#FFFFFF; background-color:#000000; border-color:rgba(136,136,136,.5);/* #888888 */}
